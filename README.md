@@ -100,7 +100,7 @@ This will:
 - **Operation**:
   - Makes API requests to the OpenSky `/states/all` endpoint.
   - Extracts flight data including `icao24`, `callsign`, `latitude`, `longitude`, `altitude`, `velocity`, and `timestamp`.
-  - Saves the data into a CSV file called `opensky_flights_60min.csv`.
+  - Saves the data into a CSV file called `flights_data.csv`.
   - Cleans the data by removing rows with missing values and aircraft that don't have full data.
 
 ### Flight Simulation Dashboard
@@ -109,7 +109,7 @@ This will:
 
 - **Function**: A Dash-based web application that visualizes the flight data collected from OpenSky.
 - **Operation**:
-  - Loads flight data from `opensky_flights_60min.csv`.
+  - Loads flight data from `flights_data.csv`.
   - Displays the flights on a map using Plotly's `Scattermapbox`.
   - Provides interactive controls to start, pause, and restart the flight simulation.
   - Allows users to adjust playback speed, select start/end times, and switch map styles.
