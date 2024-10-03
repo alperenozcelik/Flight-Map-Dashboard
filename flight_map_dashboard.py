@@ -12,7 +12,7 @@ df['timestamp'] = pd.to_datetime(df['timestamp'])
 start_date = df['timestamp'].min().date()
 end_date = df['timestamp'].max().date()
 
-# Step 2: Dash Application Setup
+# Dash Application Setup
 app = dash.Dash(__name__)
 server = app.server
 
