@@ -89,3 +89,28 @@ This will:
 
 ## File Structure
 
+
+## Code Explanation
+
+### Flight Data Collector
+
+`opensky_flight_data_collector.py`:
+
+- **Function**: This script collects real-time flight data from the OpenSky API at 30-second intervals for 60 minutes.
+- **Operation**:
+  - Makes API requests to the OpenSky `/states/all` endpoint.
+  - Extracts flight data including `icao24`, `callsign`, `latitude`, `longitude`, `altitude`, `velocity`, and `timestamp`.
+  - Saves the data into a CSV file called `opensky_flights_60min.csv`.
+  - Cleans the data by removing rows with missing values and aircraft that don't have full data.
+
+### Flight Simulation Dashboard
+
+`flight_map_dashboard.py`:
+
+- **Function**: A Dash-based web application that visualizes the flight data collected from OpenSky.
+- **Operation**:
+  - Loads flight data from `opensky_flights_60min.csv`.
+  - Displays the flights on a map using Plotly's `Scattermapbox`.
+  - Provides interactive controls to start, pause, and restart the flight simulation.
+  - Allows users to adjust playback speed, select start/end times, and switch map styles.
+
