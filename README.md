@@ -33,3 +33,12 @@ First, create a new Conda environment with Python 3.9 and activate it:
 ```bash
 conda create -n flight-sim python=3.9
 conda activate flight-sim
+```
+### Step 2: Install Required Libraries
+
+After activating the environment, install the required libraries using the following conda command:
+
+```bash
+conda install -c conda-forge requests pandas dash plotly
+```
+
