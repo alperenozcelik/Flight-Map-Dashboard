@@ -72,7 +72,7 @@ The Flight Data Collector script retrieves real-time flight data from OpenSky. T
 This script:
 
 - Sends requests to OpenSky every 30 seconds for one hour.
-- Collects data for up to 300 flights at a time.
+- Collects data for up to 100 flights at a time.
 - Saves the flight data to `flights_data.csv`.
 
 ### Running the Flight Simulation Dashboard
